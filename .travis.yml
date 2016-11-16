@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 env:
-  - IMAGE_NAME=msvrtan/code
+  - IMAGE_NAME=msvrtan/xdebug-dev
 script:
   - docker build -t $IMAGE_NAME:latest .
   - if [ $TRAVIS_TAG ]; then docker build -t $IMAGE_NAME:$TRAVIS_TAG . ; fi
